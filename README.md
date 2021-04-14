@@ -56,6 +56,7 @@ IN the DSC Module, then you don't need to specify them for each component
                     DestinationPath   = 'F:\WEB\'
                     ValidateFileName  = 'CurrentBuild.txt'
                     BuildFileName     = 'F:\Build\LogHeadersAPI\ComponentBuild.json'
+                    SleepTime         = '30'
                 }
             )
 ```
@@ -87,6 +88,7 @@ Configuration AppServers
                 Ensure                  = 'Present'
                 ManagedIdentityClientID = $clientIDGlobal
                 LogDir                  = 'F:\azcopy_logs'
+                DeploySleepWaitSeconds  = $AppComponent.SleepTime
             }
             $dependsonAZCopyDSCDir += @("[AppReleaseDSC]$($AppComponent.ComponentName)")
         }
