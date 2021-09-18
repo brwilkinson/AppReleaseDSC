@@ -1,6 +1,10 @@
 # AppReleaseDSC
 Invoke App Releases via DSC
 
+This works in conjunction with: [brwilkinson/PlatformRelease](https://github.com/brwilkinson/PlatformRelease)
+- brwilkinson/PlatformRelease [The Build tools]
+- brwilkinson/AppReleaseDSC   [The Release tools - Pull Mode]
+
 PowerShell AZCOPY + App Release DSC __Class based Resource__
 
 This is a DSC Resource for performing File sync tasks with Azure File Shares
